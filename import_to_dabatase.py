@@ -9,7 +9,7 @@ load_dotenv()
 FILE_PATH = "data.json"
 
 db_connection = pymysql.connect(host=os.getenv("DB_HOST"), user=os.getenv("DB_USERNAME"), password=os.getenv(
-    "DB_PASSWORD"), db=os.getenv("DB_DATABASE"), port=int(os.getenv("PORT")),  charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
+    "DB_PASSWORD"), db=os.getenv("DB_DATABASE"), port=int(os.getenv("DB_PORT")),  charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
 
 # prepare a cursor object using cursor() method
 cursor = db_connection.cursor()
